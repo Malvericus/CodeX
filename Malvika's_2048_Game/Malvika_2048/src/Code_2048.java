@@ -2,9 +2,9 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Random;
 import javax.swing.*;
+
 public class Code_2048 {
     private static final int SIZE = 4;
-    //Instance variables
     private int[][] grid;
     private Random random;
     private int score;
@@ -20,7 +20,6 @@ public class Code_2048 {
         random = new Random();
         score = 0;
         highScore = 0;
-        // Create the GUI components
         frame = new JFrame("Malvika's 2048");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 450);
@@ -45,7 +44,7 @@ public class Code_2048 {
         infoPanel.add(highScoreLabel);
         frame.add(infoPanel, BorderLayout.NORTH);
         frame.addKeyListener(new KeyAdapter() {
-            // Handle key events
+    
             public void keyPressed(KeyEvent e) {
                 int keyCode = e.getKeyCode();
                 if (keyCode == KeyEvent.VK_UP) {
